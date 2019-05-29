@@ -5,7 +5,7 @@
 
 int main (int argc, char* argv[]){
 
-    int me, nprocs, left, right, count; //current process rank, #of processes, left to current, right to curent
+    int myrank, nprocs, left, right, count; //current process rank, #of processes, left to current, right to curent
     MPI_Status status;
 
     float val;
@@ -29,8 +29,8 @@ int main (int argc, char* argv[]){
     sum = val;
 
     /* Compute neighbour ranks */
-    right = (me+1)%nprocs;
-    left  = (me-1+nprocs)%nprocs;
+    right = (myrank+1)%nprocs;
+    left  = (myrank-1+nprocs)%nprocs;
 
     /* Circular sum*/
     for(count = 1; count < nprocs; count++)
@@ -39,7 +39,7 @@ int main (int argc, char* argv[]){
                              &recv, 1, MPI_FLOAT, right, 0,
                               MPI_COMM_WORLD, &status);
     /* Set "val" value to the newly received rank */
-    val   =recv;
+    val =recv;
     /* Update the partial sum */
     sum += val;
       }
