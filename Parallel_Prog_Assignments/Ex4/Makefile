@@ -5,10 +5,10 @@ CFLAGS= -std=c99
 
 LFLAGS=	-lm
 
-EXE=	MPI_Reduce.x
+EXE=	Idmatrix.x
 
 SRC= \
-	MPI_pi_calc.c
+	MPI_Ex_4_1.c
 
 #################
 .SUFFIXES:

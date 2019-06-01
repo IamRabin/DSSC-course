@@ -8,11 +8,11 @@
 int main(int argc, char* argv []){
 
     int N =atoi(argv[1]); //will convert  the first argument to an int when passed arguments on the command line.
-    int nprocs,rank,chunk_size,rem;// #of processes, process id, work size, reamainder
+    int nprocs,rank,chunk_size,rem;// #of processes, process id, work size, remainder
     int I; //column of the first entry
     int i,j,k;//row index,column index and index for the nprocs
     typedef int row [N];
-    row* mat; //pointer to defined integer datatype
+    row* mat; //pointer to define integer datatype
     MPI_Status stat;
 
  //Environment Management Routines
