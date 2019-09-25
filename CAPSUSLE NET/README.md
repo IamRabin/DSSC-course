@@ -1,4 +1,4 @@
-# capsule_networks
+# Capsule_networks
 
 ## Overview
 
@@ -13,16 +13,16 @@ This code is implemented based on the Dynamic Routing between Capsules paper by 
 
 ## Steps
 
-**Step 1.** 
+**1.** 
 Clone and cd into the dir.
 
 
-**Step 2.** 
+**2.** 
 Download [MNIST dataset](http://yann.lecun.com/exdb/mnist/)
 
 
 
-**Step 3.** 
+**3.** 
 ```
 $ python train.py
 ```
@@ -46,7 +46,6 @@ $ python eval.py --is_training False
 - accuracy
 ------------
 
-|:----:|:----:|:--:|
 |test acc|94.68|94.95|
 
 
